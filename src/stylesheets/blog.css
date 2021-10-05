@@ -1,0 +1,24 @@
+.text-muted{
+    color: rgb(224, 214, 214) !important;
+}
+.form-radius{
+    border-radius: 50px !important;
+}
+.cards{
+    box-shadow: 5px 5px 12px -3px rgba(33,35,27,0.77);
+    width: 18rem;
+    margin: 0rem 1rem 1rem 0rem ;
+    
+    margin: 1rem;
+   
+
+}
+.cardHead{
+    border-radius: 1rem 0rem 0rem 1rem;
+    background: 'red'!important
+}
+.font-link {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  
