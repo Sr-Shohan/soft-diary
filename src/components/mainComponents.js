@@ -6,6 +6,14 @@ import hero from "../assets/blogging.svg";
 import cardSvg from "../assets/mobileApp.svg";
 import './../stylesheets/blog.css'
 import Buttons from './Button/Button.js'
+import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBIcon } from 'mdbreact';
+import FooterPage from './Footer/footer';
+import DropdownButton from './ProfileButton/dropdown';
+import NavbarPage from './NavBar/Nav';
+
+
+// import dropdownButton from './ProfileButton/dropdown';
+
 const MainComponents = (props) => {
     const cardHead = {
         borderRadius: '1rem 1rem 0rem 0rem',
@@ -14,15 +22,24 @@ const MainComponents = (props) => {
 
 
     const [isOpen, setIsOpen] = useState(false);
+    const [isDropDownButtonOn, setDropDownButtonOn] = useState(false);
 
     const toggle = () => setIsOpen(!isOpen);
-    const arr = ["Mobile App Testing", "Web App Testing", "API Testing"];
+    const cards = ["Mobile App Testing", "Web App Testing", "API Testing", "Performance Testing", "Rest Assured"];
+    const toggleHandle = () => {
+
+        if (isDropDownButtonOn) {
+            setDropDownButtonOn(false);
+        } else {
+            setDropDownButtonOn(true);
+        }
+    }
     return (
         <div className='font-link'>
             {/* Menu */}
-            <Navbar style={{ background: '#0B5ED7' }} expand="lg">
+            <Navbar style={{ background: 'white', borderBottom: '1px solid black' }} expand="lg">
                 <Container fluid>
-                    <Navbar.Brand style={{ color: 'white' }} href="#">SOFT DIARY</Navbar.Brand>
+                    <Navbar.Brand style={{ color: 'black' }} href="#">SOFT DIARY</Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
@@ -30,11 +47,6 @@ const MainComponents = (props) => {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-
-                            <NavDropdown title="Link" id="navbarScrollingDropdown">
-                                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-                            </NavDropdown>
 
                         </Nav>
                         <Form className="d-flex">
@@ -47,25 +59,31 @@ const MainComponents = (props) => {
                                 aria-label="Search"
                             />
                             <Button className="me-2"><div><i className="fa fa-search"></i></div></Button>
-                            {/* Dark Toggle  */}
+
                         </Form>
-                        <Button className="me-2 ">
-                            <div><i class="fa fa-user"></i></div>
-                        </Button>
 
-
-                        <ThemeToggle />
+                        <div className="profileDarkGroup">
+                            <DropdownButton toggle={isDropDownButtonOn} toggleEvent={toggleHandle} />
+                            <ThemeToggle />
+                        </div>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
             {/* Menu End */}
+
             <Container fluid style={{ border: '2px', padding: '0px 5%' }}>
                 <Row security>
-                    <Col xs={12} md={8} style={{ padding: '7rem' }}>
-                        <h1>Learn Software Testing with Us</h1>
+                    <Col xs={12} md={6} lg={8} style={{ padding: '0rem', padding: '10% 10% 0% 10%' }}>
+                        <div>
+                            <h1 style={{ textAlign: 'center' }}>Learn Software Testing with Us</h1>
+                            <p style={{ fontSize: '0.8rem', textAlign: 'center' }}> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                        </div>
                     </Col>
-                    <Col xs={6} md={4} style={{}}>
-                        <Image src={hero}></Image>
+
+                    <Col xs={12} md={6} lg={4} >
+                        <div>
+                            <Image src={hero}></Image>
+                        </div>
                     </Col>
                 </Row>
             </Container>
@@ -76,13 +94,13 @@ const MainComponents = (props) => {
 
 
 
-            <Container fluid style={{ padding: ' 0 5%', marginTop: '8rem' }}>
+            <Container fluid style={{ padding: ' 0 5%', marginTop: '1rem', background: '#e8e8e8', paddingTop: '2rem', paddingBottom: '2rem' }}>
 
 
                 <div className="tutorialHeader">
-                    <h1>Tutorials : </h1>
+                    <span style={{ fontSize: '1.5rem' }}>Tutorials : </span>
                     <button type="button" className="slide">
-                        <div>Slide</div>
+                        <div>View All</div>
                         <i class="icon-arrow-right"></i>
                     </button>
                 </div>
@@ -92,18 +110,36 @@ const MainComponents = (props) => {
 
 
                 <CardGroup>
-                    {/* <Card border="primary" style={{ width: '18rem' }} className='cards'>
-                        <Card.Header className="text-center">Mobile App Testing</Card.Header>
-                        <Card.Body>
-                            <img src={cardSvg} className="fitImage"></img>
-                        </Card.Body>
-                    </Card> */}
-                    {arr.map((value, idx) => { <TutorialCard val={value} key={idx} /> })}
-                    {arr.map((value) => { return (<li>{value}</li>) })}
-
+                    {cards.map((value) => { return <TutorialCard val={value} /> })}
                 </CardGroup>
 
             </Container>
+
+            <Container fluid style={{ padding: ' 0 5%', marginTop: '1rem', background: '#e8e8e8', paddingTop: '2rem', paddingBottom: '2rem' }}>
+
+
+                <div className="tutorialHeader">
+                    <span style={{ fontSize: '1.3rem' }}>Interview Questions : </span>
+                    <button type="button" className="slide">
+                        <div>View All</div>
+                        <i class="icon-arrow-right"></i>
+                    </button>
+                </div>
+                {/* button start */}
+
+                {/* Button End */}
+
+
+                <CardGroup>
+                    {cards.map((value) => { return <TutorialCard val={value} /> })}
+                </CardGroup>
+
+            </Container>
+
+
+            {/* //mbd testing */}
+
+            <FooterPage />
         </div >
     );
 }
