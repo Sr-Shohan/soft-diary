@@ -10,17 +10,17 @@ const FooterPage = () => {
         }}>
             <MDBContainer fluid className="text-center text-md-left">
                 <MDBRow>
-                    <MDBCol md="6" >
+                    <MDBCol md="4" >
                         {/* <h5 className="title">Footer Content</h5>
                         <p>
                             Here you can use rows and columns here to organize your footer
                             content.
                         </p> */}
 
-                        <img style={{ width: '50%', padding: '0px auto' }} src={contactsvg}></img>
+                        <img className='footerImage' src={contactsvg}></img>
 
                     </MDBCol>
-                    <MDBCol md="6" style={{ display: 'block', padding: '0rem auto' }} >
+                    <MDBCol md="8">
                         {/* <h5 className="title">Links</h5> */}
                         {/* <ul style={{ padding: "auto", visibility: 'hidden' }}>
                             <li className="list-unstyled">
@@ -36,8 +36,29 @@ const FooterPage = () => {
                                 <a href="#!">Link 4</a>
                             </li>
                         </ul> */}
-                        <IconSection style={{ transform: `translate(${0}%, ${100}%)` }} />
+                        <div className='footerSections' style={{ display: 'flex' }}>
+                            <div className='footerSection'>
+                                <h2>About Us</h2>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Reiciendis soluta consequatur aliquam, iure voluptates
+                                perferendis quam veniam et dolorem quae.
+                            </div>
+                            <div className='footerSection'>
+                                <h2>Contact</h2>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Reiciendis soluta consequatur aliquam, iure voluptates
+                                perferendis quam veniam et dolorem quae.
+                            </div>
+                            <div className='footerSection'>
+                                <h2>Career</h2>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Reiciendis soluta consequatur aliquam, iure voluptates
+                                perferendis quam veniam et dolorem quae.
+                            </div>
+                        </div>
+
                     </MDBCol>
+                    <IconSection />
                 </MDBRow>
 
             </MDBContainer>

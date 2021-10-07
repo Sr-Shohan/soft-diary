@@ -25,7 +25,7 @@ const MainComponents = (props) => {
     const [isDropDownButtonOn, setDropDownButtonOn] = useState(false);
 
     const toggle = () => setIsOpen(!isOpen);
-    const cards = ["Mobile App Testing", "Web App Testing", "API Testing", "Performance Testing", "Rest Assured"];
+    const cards = ["Mobile App Testing", "Web App Testing", "API Testing"];
     const toggleHandle = () => {
 
         if (isDropDownButtonOn) {
@@ -37,9 +37,9 @@ const MainComponents = (props) => {
     return (
         <div className='font-link'>
             {/* Menu */}
-            <Navbar style={{ background: 'white', borderBottom: '1px solid black' }} expand="lg">
+            <Navbar style={{ background: '#0F172A' }} expand="lg">
                 <Container fluid>
-                    <Navbar.Brand style={{ color: 'black' }} href="#">SOFT DIARY</Navbar.Brand>
+                    <Navbar.Brand style={{ color: 'white' }} href="#">SOFT DIARY</Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
@@ -51,14 +51,15 @@ const MainComponents = (props) => {
                         </Nav>
                         <Form className="d-flex">
                             <FormControl
-                                style={{ borderRadius: "25px" }}
+                                style={{ borderRadius: "25px", background: 'red' }}
                                 type="search"
                                 placeholder="Search"
                                 className="me-2"
 
+
                                 aria-label="Search"
                             />
-                            <Button className="me-2"><div><i className="fa fa-search"></i></div></Button>
+                            <Button style={{ background: '#F0A500' }} className="me-2"><div><i className="fa fa-search"></i></div></Button>
 
                         </Form>
 
@@ -98,7 +99,7 @@ const MainComponents = (props) => {
 
 
                 <div className="tutorialHeader">
-                    <span style={{ fontSize: '1.5rem' }}>Tutorials : </span>
+                    <h3 style={{}}>Tutorials : </h3>
                     <button type="button" className="slide">
                         <div>View All</div>
                         <i class="icon-arrow-right"></i>
@@ -119,7 +120,7 @@ const MainComponents = (props) => {
 
 
                 <div className="tutorialHeader">
-                    <span style={{ fontSize: '1.3rem' }}>Interview Questions : </span>
+                    <h3 >Interview Questions : </h3>
                     <button type="button" className="slide">
                         <div>View All</div>
                         <i class="icon-arrow-right"></i>

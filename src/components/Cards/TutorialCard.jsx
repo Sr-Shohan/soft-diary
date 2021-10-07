@@ -6,7 +6,7 @@ export default function tutorialCard({ val }) {
     return (
 
         <Card border="primary" style={{ width: '18rem' }} className='cards'>
-            <Card.Header className="text-center">{val}</Card.Header>
+            <Card.Header className="text-center"> <h6>{val}</h6>   </Card.Header>
             <Card.Body>
                 <img src={cardSvg} className="fitImage"></img>
             </Card.Body>

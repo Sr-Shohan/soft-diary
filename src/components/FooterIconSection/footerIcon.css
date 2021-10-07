@@ -1,29 +1,28 @@
 :root {
     --bg: #dcdde1;     
     --color-icon: #535c68;  
-    --social-icon1: #e4405f;
-    --social-icon2: #3b5999;
-    --social-icon3: #e4405f;
+    --social-icon1: #3B5998;
+    --social-icon2: #4875B4;
+    --social-icon3: #1DA1F2;
     --social-icon4: #cd201f;
     --social-icon5: #0077B5;  
   }
   
   
-  section {
+  /* section {
     width: auto;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;  
     z-index: -10;
-  }
+  } */
   
   .icon-list {
     width: 100%;
-    max-width: 50rem;
     padding: 0 1.5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
   .icon-list::before{
       content: '';
@@ -35,6 +34,7 @@
   
   .icon-link {  
     display: inline-flex;
+    padding: 0rem 3rem;
     font-size: 2rem;  
     text-decoration: none;  
     color: var(--color-icon);
@@ -45,6 +45,7 @@
     z-index: 1;
     margin: auto
   }
+
   
   .icon-link:hover {
     color: #fff;
@@ -58,7 +59,7 @@
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
+    left: 2.3rem;
     right: 0;
     bottom: 0;
     width: 3rem;
@@ -69,7 +70,14 @@
     transform: scale(0);
     transition: 0.3s cubic-bezier(.95, .32, .37, 1.21);
   }
-    
+  @media only screen and (max-width: 360px) {
+    .icon-link{
+      padding: 0rem 2.1rem;
+    }
+    .icon-link::before {  
+      left: 1.5rem;
+    }
+  }
   .icon-link:hover::before {  
     transform: scale(1);
   }

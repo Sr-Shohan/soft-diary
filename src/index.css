@@ -72,7 +72,7 @@
 
 .slide::after {
   content: "";
-  background-color: #f29e66;
+  background-color: #F0A500;
   width: 100%;
   z-index: -1;
   position: absolute;
@@ -133,6 +133,7 @@
   border-radius: 50%;
   outline: none;
   cursor: pointer;
+  background-color: #F0A500;
 }
 
 .links {
@@ -158,16 +159,39 @@
 /* profile dark group end */
 .navbar-toggler-icon{
   text-shadow: none;
+
 }
 .navbar-toggler{
   box-shadow: none !important;
+  background-color: #E1E8EB !important;
+  border-radius: 15%;
 }
 .form-control{
   box-shadow: none !important;
   border: none !important;
-  background-color: #e0e0e0e8 !important;
+  background-color: #E1E8EB !important;
 }
 .btn{
   box-shadow: none !important;
   border: none !important;
+}
+
+
+/* footer section */
+.footerSections{
+  
+}
+.footerImage{
+  width: 90%;
+  padding: 0px auto;
+}
+
+@media only screen and (max-width: 600px){
+  .footerSections{
+    flex-wrap: wrap;
+    padding: 1rem 0rem;
+  }
+  .footerImage{
+    width: 95%;
+  }
 }

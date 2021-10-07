@@ -8,8 +8,9 @@
     box-shadow: 5px 5px 12px -3px rgba(33,35,27,0.77);
     width: 18rem;
     margin: 0rem 1rem 1rem 0rem ;
-    
+    border: none;
     margin: 1rem;
+    
    
 
 }
@@ -18,7 +19,11 @@
     background: 'red'!important
 }
 .font-link {
-    font-family: 'Raleway', sans-serif;
+    font-family:  'Rubik', 'Raleway', sans-serif;
   }
 
+  .card-header{
+      background: #F0A500;
+      
+  }
   
