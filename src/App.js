@@ -1,13 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import MainComponent from './components/mainComponents';
 
 function App() {
   return (
-    <div className="App">
-      k,
+    <MainComponent />
+  )
 
-    </div>
-  );
 }
 
 export default App;
