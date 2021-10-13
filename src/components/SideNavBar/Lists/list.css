@@ -1,0 +1,12 @@
+.toogleButton{
+    display: block;
+    background: none;
+    background-color: grey;
+    border: none;
+    color: white;
+}
+.toggleButtonContainer{
+    display: inline-block;
+    background-color: grey;
+    width: 100%;
+}
