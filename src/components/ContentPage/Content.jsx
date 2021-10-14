@@ -16,7 +16,7 @@ export default function CotentPage({match:{params}}){
                 </div>
 
                 <div>
-                    <h1>This is content page-{params.subject}</h1>
+                    <h2>This is content page-{params.subject}</h2>
                 </div>
 
             </div>

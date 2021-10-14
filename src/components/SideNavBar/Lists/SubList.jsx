@@ -10,7 +10,7 @@ export default function SubList({list,title}){
    if(list){
     lists=lister.map((value)=> {(<li><a href='#'>{value}</a></li>)});
    }
-   console.log(lists);
+
     const [isToggle, setToggle] = useState(false);
     
     const handleToggle= ()=>{

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import SubList from './SubList';
 import './list.css';
 export default function List({isCollapse}){

@@ -3,7 +3,7 @@
     background: none;
     background-color: grey;
     border: none;
-    color: white;
+    color: rgb(228, 228, 228);
 }
 .toggleButtonContainer{
     display: inline-block;

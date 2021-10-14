@@ -10,6 +10,7 @@ function SideNav(){
             setCollapse(true);
         }
     };
+    console.log("sidenav");
     
     return (
             <div className={isCollapse?'navHide': 'listContainer'}>
