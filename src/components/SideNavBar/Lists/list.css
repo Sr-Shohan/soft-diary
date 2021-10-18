@@ -1,12 +1,16 @@
-.toogleButton{
-    display: block;
-    background: none;
-    background-color: grey;
-    border: none;
-    color: rgb(228, 228, 228);
+.toogleButton {
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  color: rgb(228, 228, 228);
+  cursor: pointer;
 }
-.toggleButtonContainer{
-    display: inline-block;
-    background-color: grey;
-    width: 100%;
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: rgb(241, 241, 241);
 }

@@ -18,7 +18,7 @@ export default function TutorialCard({ val,link,type }) {
             <NavLink exact to={`/${type}/${link}`}>
                 <Card.Header className="text-center"> <h6>{val}</h6>   </Card.Header>
                 <Card.Body>
-                    <img src={cardSvg} className="fitImage"></img>
+                    <img src={cardSvg} alt={"card"} className="fitImage"></img>
                 </Card.Body>
             </NavLink>
                 

@@ -1,67 +1,73 @@
-*{
-	box-sizing: border-box;
-	padding: 0px;
-	margin: 0px;
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
 }
 
-ul{
-	padding-left: 15px;
-    list-style: none;
+ul {
+  padding-left: 15px;
+  list-style: none;
 }
-ul>li>ul{
-	padding-left: 5px;
+ul > li > ul {
+  padding-left: 5px;
 }
-@keyframes navShowTransition{
-    0%{
-       width: 20px;
-    }
-    100%{
-        width: 25vw;
-    }
-}
-.listContainer{
-	color: rgb(255, 255, 255);
-	height: 88vh;
-    width: 25vw;
-	background-color: rgb(0, 0, 0);
-    list-style: none;
-    animation-name: navShowTransition;
-    animation-duration: 0.7s;
-}
-.lister{
-	display: inline-block;
-	padding: 35px 0px 0px 15px;	
-}
-.collapse_btn{
-    display: block;
-    color: rgb(250, 246, 246);
-    float: right;
-    padding: 2px 10px;
-    font-size: 1vw;
-    background: black;
-    border: none;
-    border-radius: 3px;
-}
-@keyframes navHideTransition{
-    0%{
-       width: 25vw;
-    }
-    25%{
-        visibility: hidden;
-    }
-    100%{
-        width: 20px;
-    }
-}
-.navHide{
-    display: block;
+@keyframes navShowTransition {
+  0% {
     width: 20px;
-    overflow: hidden;
-    height: 88vh;
-    background-color: rgb(0, 0, 0);
-    animation-name: navHideTransition;
-    animation-duration: 0.7s;
-}
-.lister_hidden{
     visibility: hidden;
+  }
+  100% {
+    width: 25vw;
+    visibility: visible;
+  }
+}
+.listContainer {
+  color: rgb(255, 255, 255);
+  height: 88vh;
+  width: 25vw;
+  background-color: rgb(0, 0, 0);
+  list-style: none;
+  overflow: hidden;
+  animation-name: navShowTransition;
+  animation-duration: 0.7s;
+}
+.lister {
+  display: inline;
+  padding: 35px 0px 0px 15px;
+}
+.lister_hidden {
+  display: block;
+  visibility: hidden;
+}
+
+.collapse_btn {
+  display: block;
+  color: rgb(250, 246, 246);
+  float: right;
+  padding: 2px 10px;
+  font-size: 1vw;
+  background: black;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+@keyframes navHideTransition {
+  0% {
+    width: 25vw;
+  }
+  25% {
+    visibility: hidden;
+  }
+  100% {
+    width: 20px;
+  }
+}
+.navHide {
+  display: inline-block;
+  width: 20px;
+  overflow: hidden;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  animation-name: navHideTransition;
+  animation-duration: 0.7s;
 }

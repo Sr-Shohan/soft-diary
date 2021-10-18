@@ -1,25 +1,29 @@
 import SubList from './SubList';
 import './list.css';
+import { Link } from 'react-router-dom';
 export default function List({isCollapse}){
     const navMenu=[
         {
-            'title': 'Web App Testing',
+            "title": "topic1",
+            "subject": "Mobile App Testing",
         },
         {
-            'title': 'Mobile App Testing',
+            "title": "topic2",
+            "subject": "Web App Testing",
         },
         {
-            'title': 'Automation Testing',
-            'subTopic': ['What is automation testing','Application of Automation', 'Importance of Automation']
+            "title": "topic3",
+            "subject": "API Testing",
+            "subTopic": ["What is automation testing","Application of Automation", "Importance of Automation"]
         }
     ];
     const list=navMenu.map(
         (value)=>{
             if(value.subTopic!==undefined){
                 
-                return (<SubList list={value.subTopic} title={value.title}/>);
+                return (<SubList list={value.subTopic} title={value.title} subject={value.subject}/>);
             }else{
-                return (<li>{value.title}</li>);
+                return (<li><Link to={`/subject/${value.subject}/${value.title}`}>{value.title}</Link></li>);
             }
         }
         );

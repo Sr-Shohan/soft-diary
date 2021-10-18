@@ -10,11 +10,11 @@ function SideNav(){
             setCollapse(true);
         }
     };
-    console.log("sidenav");
+
     
     return (
             <div className={isCollapse?'navHide': 'listContainer'}>
-            <div className=''>
+            <div>
                 <button className='collapse_btn' onClick={()=>handleClick()}><i class={isCollapse?'fa fa-angle-right': 'fa fa-angle-left'} ></i></button>
             </div>
                 <List isCollapse={isCollapse}/>
